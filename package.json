@@ -2,7 +2,7 @@
   "private": true,
   "author": "",
   "scripts": {
-    "dev": "set PORT=8080&&umi dev",
+    "dev": "set PORT=80&&umi dev",
     "build": "umi build",
     "postinstall": "umi setup",
     "setup": "umi setup",
