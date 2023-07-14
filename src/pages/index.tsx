@@ -9,12 +9,13 @@ import { OTLPTraceExporter } from '@opentelemetry/exporter-trace-otlp-http';
 
 const collectorExporter = new OTLPTraceExporter({
   url: "http://172.31.6.206:4330/v1/traces",
+  // url: "http://10.10.70.112:4330/v1/traces",
   headers: {}
 });
 
 const providerConfig: TracerConfig = {
   resource: new Resource({
-    [SemanticResourceAttributes.SERVICE_NAME]: 'umi-2', // or call APP_NAME by calling process.env.APP_NAME 
+    [SemanticResourceAttributes.SERVICE_NAME]: process.env.APP_NAME, // or call APP_NAME by calling process.env.APP_NAME 
   }),
 };
 
