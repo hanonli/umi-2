@@ -15,7 +15,7 @@ const collectorExporter = new OTLPTraceExporter({
 
 const providerConfig: TracerConfig = {
   resource: new Resource({
-    [SemanticResourceAttributes.SERVICE_NAME]: process.env.APP_NAME, // or call APP_NAME by calling process.env.APP_NAME 
+    [SemanticResourceAttributes.SERVICE_NAME]: 'umi-2', // or call APP_NAME by calling process.env.APP_NAME 
   }),
 };
 
