@@ -2,14 +2,14 @@ import yayJpg from '../assets/yay.jpg';
 import { registerInstrumentations } from '@opentelemetry/instrumentation';
 import { getWebAutoInstrumentations } from '@opentelemetry/auto-instrumentations-web';
 import { ConsoleSpanExporter, SimpleSpanProcessor, TracerConfig, WebTracerProvider, BatchSpanProcessor } from '@opentelemetry/sdk-trace-web';
-import { ZoneContextManager } from '@opentelemetry/context-zone';
+// import { ZoneContextManager } from '@opentelemetry/context-zone';
 import { SemanticResourceAttributes } from '@opentelemetry/semantic-conventions';
 import { Resource } from '@opentelemetry/resources';
 import { OTLPTraceExporter } from '@opentelemetry/exporter-trace-otlp-http';
 
 const collectorExporter = new OTLPTraceExporter({
-  url: "http://172.31.6.206:4330/v1/traces",
-  // url: "http://10.10.70.112:4330/v1/traces",
+  // url: "http://172.31.6.206:4330/v1/traces",
+  url: "http://10.10.70.112:4330/v1/traces",
   headers: {}
 });
 
@@ -25,7 +25,7 @@ provider.addSpanProcessor(new SimpleSpanProcessor(new ConsoleSpanExporter()));
 provider.addSpanProcessor(new BatchSpanProcessor(collectorExporter));
 
 provider.register({
-  contextManager: new ZoneContextManager(),
+  // contextManager: new ZoneContextManager(),
 });
 
 registerInstrumentations({
