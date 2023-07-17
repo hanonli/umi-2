@@ -8,9 +8,11 @@ import { Resource } from '@opentelemetry/resources';
 import { OTLPTraceExporter } from '@opentelemetry/exporter-trace-otlp-http';
 
 const collectorExporter = new OTLPTraceExporter({
-  // url: "http://172.31.6.206:4330/v1/traces",
-  url: "http://10.10.70.112:4330/v1/traces",
-  headers: {}
+  url: "http://172.31.6.206:4330/v1/traces",
+  // url: "http://10.10.70.112:4330/v1/traces",
+  headers: {
+    'Access-Control-Allow-Origin': '*'
+  }
 });
 
 const providerConfig: TracerConfig = {
