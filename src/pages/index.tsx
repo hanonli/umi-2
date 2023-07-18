@@ -9,7 +9,7 @@ const { Resource } = require('@opentelemetry/resources');
 const { SemanticResourceAttributes } = require('@opentelemetry/semantic-conventions');
 
 const exporter = new OTLPTraceExporter({
- url: 'http://172.31.12.83:4318/v1/traces',
+ url: 'http://3.106.54.87:4318/v1/traces',
 //  url: 'http://10.10.70.112:4330/v1/traces',
  headers: {}
 });
