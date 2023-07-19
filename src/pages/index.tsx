@@ -5,7 +5,7 @@ export default function HomePage() {
   return (
       <TraceProvider>
         <div>
-          <h2>Yay! Welcome to umi! umi-1:47</h2>
+          <h2>Yay! Welcome to umi!</h2>
           <p>
             <img src={yayJpg} width="388" />
           </p>
