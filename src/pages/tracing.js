@@ -8,8 +8,7 @@ import { Resource } from '@opentelemetry/resources';
 import { SemanticResourceAttributes } from '@opentelemetry/semantic-conventions';
 
 const exporter = new OTLPTraceExporter({
- url: 'http://3.106.54.87:4318/v1/traces',
-//  url: 'http://10.10.70.112:4330/v1/traces',
+ url: 'http://3.106.54.87:4318/v1/traces', // use public ip of ubuntu vm and specify proxy port
  headers: {}
 });
 const provider = new WebTracerProvider({
