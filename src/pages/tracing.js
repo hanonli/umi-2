@@ -14,7 +14,7 @@ const exporter = new OTLPTraceExporter({
 });
 const provider = new WebTracerProvider({
  resource: new Resource({
-   [SemanticResourceAttributes.SERVICE_NAME]: 'umi-2-fluke666', // can use 'process.env.APP_NAME' instead of this
+   [SemanticResourceAttributes.SERVICE_NAME]: 'umi-frontend', // can use 'process.env.APP_NAME' instead of this
  }),
 });
 provider.addSpanProcessor(new BatchSpanProcessor(exporter));
